@@ -1,0 +1,63 @@
+{
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.7",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/styled-components": "^5.0.0",
+    "faker": "^4.1.0",
+    "husky": "^4.2.3",
+    "json-server": "^0.16.0",
+    "lodash.random": "^3.2.0",
+    "lodash.upperfirst": "^4.3.1",
+    "polished": "^3.4.4",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.2.0",
+    "react-scripts": "3.4.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.0.1",
+    "typescript": "~3.7.2",
+    "wait-for-localhost-cli": "^1.1.0"
+  },
+  "scripts": {
+    "start": "npm run start:api & wait-for-localhost 4000 && npm run start:web",
+    "start:api": "json-server -p 4000 -m api/post.js -d -w ./api/db.json",
+    "start:api:timeout": "json-server -p 4000 -m api/timeout.js -d -w ./api/db.json",
+    "start:web": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
