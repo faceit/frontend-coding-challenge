@@ -5,19 +5,23 @@
 - Fork this repository `frontend-coding-challenge` privately to your GitHub account.
 - Checkout the forked repository and work on a branch named `solution`.
 
+---
+
 ## Introduction
 
-You are given a prepared SPA project that was bootstrapped with Create React App. The app must render a list of tournaments from a fake REST API. New tournaments can be created and tournaments can be searchable, editable and removable through the fake REST API. Few basic elements such as headings, button and input have already been created.
+You are given a prepared SPA project that was bootstrapped with Create React App. The app must render a list of tournaments from a fake REST API (bundled alongside the project). New tournaments can be created and tournaments should be searchable (search functionality must be optimised with performance in mind), editable and removable through the fake REST API. A theme and a few basic elements such as headings, button and input have already been created for you.
 
 ![preview](.github/preview.gif)
 
-## Tasks
-
 ### Notes
 
-- Redux must be used for data fetching.
-- Alternatively to styled-components, you may use [CSS/CSS Modules/Sass provided by CRA](https://create-react-app.dev/docs/adding-a-stylesheet).
-- Any open-source library is allowed to be used.
+- Redux _must_ be used for data fetching
+- Alternatively to `styled-components`, you may use [CSS/CSS Modules/Sass provided by CRA](https://create-react-app.dev/docs/adding-a-stylesheet)
+- Any _open-source_ library is allowed to be used
+
+---
+
+## Tasks
 
 ### 1) Show all tournaments
 
@@ -84,6 +88,8 @@ You are given a prepared SPA project that was bootstrapped with Create React App
 
 - Clicking on the `CREATE TOURNAMENT` button will open a browser prompt with a message `Tournament Name:`, an input field to enter the tournament name and the buttons `Cancel` to cancel and `OK` to confirm.
 - When confirming, the tournament will be created on the fake REST API and added on the UI without any loading indicators.
+
+---
 
 ## Finished?
 

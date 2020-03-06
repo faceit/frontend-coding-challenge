@@ -7,16 +7,25 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [styled-components](https://github.com/styled-components/styled-components)
 - [polished](https://github.com/styled-components/polished)
 
+---
+
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+```sh
+yarn start
+```
 
 Starts a fake REST API server on [http://localhost:4000](http://localhost:4000) and runs the app in the development mode on [http://localhost:3000](http://localhost:3000).
 
-The page will reload if you make edits.<br />
-You will also see any TypeScript or lint errors in the console.
+### Notes
+
+- The page will reload if you make edits.
+- You will also see any TypeScript or lint errors in the console.
+- You can restart the application to reset/regenerate the data.
+
+---
 
 ## Fake REST API
 
@@ -27,6 +36,14 @@ Running on [http://localhost:4000](http://localhost:4000).
 #### GET
 
 Returns a list of tournaments.
+
+##### Query Parameters
+
+###### `q`
+
+Type: `string`
+
+Search tournaments by any value
 
 ##### Response Example
 

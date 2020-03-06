@@ -30,8 +30,8 @@
   },
   "scripts": {
     "start": "npm run start:api & wait-for-localhost 4000 && npm run start:web",
-    "start:api": "json-server -p 4000 -m api/post.js -d -w ./api/db.json",
-    "start:api:timeout": "json-server -p 4000 -m api/timeout.js -d -w ./api/db.json",
+    "start:api": "json-server -p 4000 -m api/post.js -d -w ./api/db.js",
+    "start:api:timeout": "json-server -p 4000 -m api/timeout.js -d -w ./api/db.js",
     "start:web": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
