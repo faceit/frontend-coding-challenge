@@ -2,8 +2,10 @@
 
 ## Prerequisites
 
-- Fork this repository `frontend-coding-challenge` privately to your GitHub account.
-- Checkout the forked repository and work on a branch named `solution`.
+- Clone this repository to a private repository on your GitHub account.
+- Work on a branch named `solution`.
+  - The `master` branch is based on TypeScript.
+  - If you wish to do the task in plain JavaScript, base off from the branch `javascript`.
 
 ---
 
@@ -15,9 +17,9 @@ You are given a prepared SPA project that was bootstrapped with Create React App
 
 ### Notes
 
-- Redux _must_ be used for data fetching
-- Alternatively to `styled-components`, you may use [CSS/CSS Modules/Sass provided by CRA](https://create-react-app.dev/docs/adding-a-stylesheet)
-- Any _open-source_ library is allowed to be used
+- Redux _must_ be used for data fetching.
+- Alternatively to `styled-components`, you may use [CSS/CSS Modules/Sass provided by CRA](https://create-react-app.dev/docs/adding-a-stylesheet).
+- Any _open-source_ library is allowed to be used.
 
 ---
 
@@ -93,5 +95,5 @@ You are given a prepared SPA project that was bootstrapped with Create React App
 
 ## Finished?
 
-- Push your work to your fork on GitHub.
-- Give read access to `faceit-frontend-coding-challenge` in your forked repository.
+- Push your work to your private GitHub repository.
+- Give read access to `faceit-frontend-coding-challenge` in your private GitHub repository.
