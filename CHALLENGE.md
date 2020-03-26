@@ -51,14 +51,14 @@ You are given a prepared SPA project that was bootstrapped with Create React App
 ![edit-promp](.github/edit-prompt.png)
 
 - Clicking on the `EDIT` button will open a browser prompt with a message `New Tournament Name:`, an input field with the current tournament name as pre-filled value and the buttons `Cancel` to cancel and `OK` to confirm.
-- When confirming, the tournament name will be updated on the fake REST API and UI optimisticly without any loading indicators.
+- When confirming, the tournament name will be updated on the fake REST API and UI optimistically without any loading indicators.
 
 ### 3. Delete a tournament
 
 ![delete-promp](.github/delete-prompt.png)
 
 - Clicking on the `DELETE` button will open a browser prompt with a message `Do you really want to delete this tournament?` and the buttons `Cancel` to cancel and `OK` to confirm.
-- When confirming, the tournament name will be deleted on the fake REST API and UI optimisticly without any loading indicators.
+- When confirming, the tournament name will be deleted on the fake REST API and UI optimistically without any loading indicators.
 
 ### 4. Search tournaments
 
@@ -76,7 +76,7 @@ You are given a prepared SPA project that was bootstrapped with Create React App
 
 - Clicking on the `RETRY` button will retry the fetching.
 
-#### 4.D) Show all tournaments from the search result when the fetching has suceeed:
+#### 4.D) Show all tournaments from the search result when the fetching has succeed:
 
 ![search-success](.github/search-success-state.png)
 
