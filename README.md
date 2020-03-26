@@ -35,7 +35,7 @@ Running on [http://localhost:4000](http://localhost:4000).
 
 #### GET
 
-Returns a list of tournaments.
+Get a list of tournaments.
 
 ##### Query Parameters
 
@@ -85,11 +85,9 @@ Search tournaments by any value
 ]
 ```
 
-### `/tournaments/:id`
-
 #### POST
 
-Creates a tournament.
+Create a tournament.
 
 ##### Request Example
 
@@ -115,9 +113,11 @@ Creates a tournament.
 }
 ```
 
+### `/tournaments/:id`
+
 #### PATCH
 
-Edits a tournament.
+Edit a tournament.
 
 ##### Request Example
 
@@ -145,7 +145,7 @@ Edits a tournament.
 
 #### DELETE
 
-Deletes a tournament.
+Delete a tournament.
 
 ##### Response Example
 
