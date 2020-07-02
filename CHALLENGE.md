@@ -42,7 +42,7 @@ You are given a prepared SPA project that was bootstrapped with Create React App
 ![success](.github/success-state.png)
 
 - The tournament name has the heading size `h6`.
-- The `Start` date must be displayed in the format `DD/MM/YYYY, HH:MM:SS` using the `en-GB` locale.
+- The `Start` date must be displayed in the format `DD/MM/YYYY, HH:mm:ss` using the `en-GB` locale.
 - The horizontal and vertical spacing between each tournament must be `24px`.
 - The horizontal spacing between the `EDIT` and `DELETE` button is `8px`.
 
