@@ -1,11 +1,12 @@
 # Frontend Coding Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and consists of following addtional libraries:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and has addtional libraries included:
 
-- [Redux](https://github.com/reduxjs/redux)
+- [Redux](https://redux.js.org/)
 - [Redux Thunk](https://github.com/reduxjs/redux-thunk)
-- [styled-components](https://github.com/styled-components/styled-components)
-- [polished](https://github.com/styled-components/polished)
+- [React Redux](https://react-redux.js.org/)
+- [styled-components](https://styled-components.com/)
+- [polished](https://polished.js.org/)
 
 ## Available Scripts
 
