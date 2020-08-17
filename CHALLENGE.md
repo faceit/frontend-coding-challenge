@@ -44,6 +44,10 @@ You are given a prepared SPA project that was bootstrapped with Create React App
 - The horizontal spacing between the `EDIT` and `DELETE` button is `8px`.
 - The horizontal and vertical spacing between each tournament must be `24px`.
 
+#### 1.D) Show `No tournaments found.` when the fetch result is empty:
+
+![no-result](.github/no-result-state.png)
+
 ### 2. Edit a tournament
 
 ![edit-promp](.github/edit-prompt.png)
@@ -77,6 +81,10 @@ You are given a prepared SPA project that was bootstrapped with Create React App
 #### 4.D) Show all tournaments from the search result when the fetching has succeed:
 
 ![search-success](.github/search-success-state.png)
+
+#### 4.E) Show `No tournaments found.` when the search result is empty:
+
+![search-no-result](.github/search-no-result-state.png)
 
 ### 5. Create a tournament
 
