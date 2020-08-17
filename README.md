@@ -11,17 +11,40 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-```sh
-yarn start
-```
+### `yarn start`
 
-Starts a fake REST API server on [http://localhost:4000](http://localhost:4000) and runs the app in the development mode on [http://localhost:3000](http://localhost:3000).
+Starts the fake REST API server on [http://localhost:4000](http://localhost:4000) and runs the app in development mode on [http://localhost:3000](http://localhost:3000).
 
-### Notes
+#### Notes
 
 - The page will reload if you make edits.
 - You will also see any TypeScript or lint errors in the console.
-- You can restart the application to reset/regenerate the data.
+- You can re-run the script to reset/regenerate the data.
+
+### `yarn start:web`
+
+```sh
+yarn start:web
+```
+
+Runs the app in development mode on [http://localhost:3000](http://localhost:3000).
+
+#### Notes
+
+- The page will reload if you make edits.
+- You will also see any TypeScript or lint errors in the console.
+
+### `yarn start:api`
+
+```sh
+yarn start:web
+```
+
+Starts the fake REST API server on [http://localhost:4000](http://localhost:4000).
+
+#### Notes
+
+- You can re-run the script to reset/regenerate the data.
 
 ## Fake REST API
 
