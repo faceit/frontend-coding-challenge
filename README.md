@@ -8,6 +8,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [styled-components](https://styled-components.com/)
 - [polished](https://polished.js.org/)
 
+Head over to the coding challenge [here](./CHALLENGE.md).
+
 ## Available Scripts
 
 In the project directory, you can run:
