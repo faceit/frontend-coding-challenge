@@ -18,6 +18,7 @@ You are given a prepared SPA project that was bootstrapped with Create React App
 - Redux _must_ be used for data fetching.
 - Alternatively to `styled-components`, you may use [CSS/CSS Modules/Sass provided by CRA](https://create-react-app.dev/docs/adding-a-stylesheet).
 - Any _open-source_ library is allowed to be used.
+- It should take around 2 hours to complete, max 3.
 
 ## Tasks
 
