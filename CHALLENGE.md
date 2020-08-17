@@ -7,11 +7,9 @@
   - The `master` branch is based on TypeScript.
   - If you wish to do the task in plain JavaScript, base off from the branch `javascript`.
 
----
-
 ## Introduction
 
-You are given a prepared SPA project that was bootstrapped with Create React App. The app must render a list of tournaments from a fake REST API (bundled alongside the project). New tournaments can be created and tournaments should be searchable (search functionality must be optimised with performance in mind), editable and removable through the fake REST API. A theme and a few basic elements such as headings, button and input have already been created for you.
+You are given a prepared SPA project that was bootstrapped with Create React App. The app must render a list of tournaments from a fake REST API (included in the project). New tournaments can be created and tournaments should be searchable (search functionality must be optimised with performance in mind), editable and deletable through the fake REST API. A theme and a few basic elements such as headings, button and input have already been created for you.
 
 ![preview](.github/preview.gif)
 
@@ -20,8 +18,6 @@ You are given a prepared SPA project that was bootstrapped with Create React App
 - Redux _must_ be used for data fetching.
 - Alternatively to `styled-components`, you may use [CSS/CSS Modules/Sass provided by CRA](https://create-react-app.dev/docs/adding-a-stylesheet).
 - Any _open-source_ library is allowed to be used.
-
----
 
 ## Tasks
 
@@ -90,8 +86,6 @@ You are given a prepared SPA project that was bootstrapped with Create React App
 
 - Clicking on the `CREATE TOURNAMENT` button will open a browser prompt with a message `Tournament Name:`, an input field to enter the tournament name and the buttons `Cancel` to cancel and `OK` to confirm.
 - When confirming, the tournament will be created on the fake REST API and added on the UI without any loading indicators.
-
----
 
 ## Finished?
 

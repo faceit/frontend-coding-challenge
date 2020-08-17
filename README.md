@@ -7,8 +7,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [styled-components](https://github.com/styled-components/styled-components)
 - [polished](https://github.com/styled-components/polished)
 
----
-
 ## Available Scripts
 
 In the project directory, you can run:
@@ -24,8 +22,6 @@ Starts a fake REST API server on [http://localhost:4000](http://localhost:4000) 
 - The page will reload if you make edits.
 - You will also see any TypeScript or lint errors in the console.
 - You can restart the application to reset/regenerate the data.
-
----
 
 ## Fake REST API
 
