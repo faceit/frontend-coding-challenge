@@ -2,8 +2,8 @@
 
 ## Prerequisites
 
-- Clone this repository to a private repository on your GitHub account.
-- Work on a branch named `solution`.
+- Clone this repository to your machine
+- Select the branch (depending on the language you want to work with)
   - The `master` branch is based on TypeScript.
   - If you wish to do the task in plain JavaScript, base off from the branch `javascript`.
 
@@ -99,5 +99,5 @@ You are given a prepared SPA project that was bootstrapped with Create React App
 
 ## Finished?
 
-- Push your work to your private GitHub repository.
-- Give read access to `faceit-frontend-coding-challenge` in your private GitHub repository.
+- Create a `ZIP` file with your solution
+- Send it to the recruiter that sent you this challenge
