@@ -5,7 +5,6 @@
 - Clone this repository to your machine
 - Select the branch (depending on the language you want to work with)
   - The `master` branch is based on TypeScript.
-  - If you wish to do the task in plain JavaScript, base off from the branch `javascript`.
 
 ## Introduction
 
