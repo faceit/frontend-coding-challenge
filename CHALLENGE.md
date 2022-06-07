@@ -2,9 +2,8 @@
 
 ## Prerequisites
 
-- Clone this repository to your machine
-- Select the branch (depending on the language you want to work with)
-  - The `master` branch is based on TypeScript.
+- Clone this repository to your machine and use the `master` branch
+- Use `TypeScript` as programming language
 
 ## Introduction
 
