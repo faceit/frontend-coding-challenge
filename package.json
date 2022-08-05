@@ -13,7 +13,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.25",
     "concurrently": "^7.3.0",
-    "husky": "^4.3.8",
+    "husky": "^8.0.1",
     "json-server": "^0.17.0",
     "lodash.random": "^3.2.0",
     "lodash.upperfirst": "^4.3.1",
@@ -37,7 +37,8 @@
     "start:web": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -56,11 +57,6 @@
   },
   "prettier": {
     "singleQuote": true
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
   },
   "resolutions": {
     "@babel/runtime": "7.18.9"
