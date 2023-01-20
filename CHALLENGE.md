@@ -23,7 +23,7 @@ The project includes:
 - Challenge _must_ be implemented on TypeScript.
 - Redux _must_ be used for data fetching.
 - Any _open-source_ library is allowed to be used, except [Redux Toolkit](https://redux-toolkit.js.org/).
-- Redux Toolkit is _not_ allowed. For the purpose of the challenge it is important for us to evaluate the candidate understanding of the building blocks of Redux.
+- Redux Toolkit is _not_ allowed. For the purpose of the challenge it is important for us to evaluate the candidate's understanding of the building blocks of Redux.
 - Completion duration: about 3 hours.
 
 ## Tasks
