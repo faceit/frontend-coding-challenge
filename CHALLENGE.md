@@ -91,7 +91,7 @@ Requirements:
 
 ![search-no-result](.github/search-no-result-state.png)
 
-#### 4.F) Optimize the search functionality for performance.
+#### 4.F) Optimize the search functionality to reduce the number of excessive requests.
 
 ### 5. Create a tournament
 
