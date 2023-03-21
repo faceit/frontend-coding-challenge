@@ -53,14 +53,14 @@ This is a minimal Create React App SPA that includes:
 
 - Pressing the `EDIT` button opens a browser prompt with the prompt message `New Tournament Name:`, an input field with the current tournament name as pre-filled value and buttons `Cancel` to cancel and `OK` to confirm.
 - The tournament name must contain only Latin letters, numbers, and spaces, not an empty string or only spaces.
-- When `OK` is selected, the tournament name updates immediately in the UI through an optimistic update, without any loading indicators, and a fetch call to the fake REST API.
+- When `OK` is selected, the tournament name updates immediately in the UI through an "optimistic update", without any loading indicators, and a fetch call to the fake REST API.
 
 ### 3. Delete a tournament
 
 ![delete-promp](.github/delete-prompt.png)
 
 - Pressing the `DELETE` button opens a browser prompt with the message `Do you really want to delete this tournament?` and the buttons `Cancel` to cancel and `OK` to confirm.
-- When `OK` is selected, the tournament is deleted immediately in the UI using an optimistic delete, without any loading indicators, and a fetch call to the fake REST API is made.
+- When `OK` is selected, the tournament is deleted immediately in the UI using an "optimistic delete", without any loading indicators, and a fetch call to the fake REST API is made.
 
 ### 4. Search tournaments
 
@@ -117,25 +117,21 @@ Requirements:
 
 - Examples of the expected layout on different screen sizes are provided:
 
-<details>
-  <summary>iPhone 12 Pro Max (428x926)</summary>
-  <img alt="iPhone 12 Pro Max" src=".github/iPhone-12-Pro-Max.png">
-</details>
+- iPhone 12 Pro Max (428x926):
 
-<details>
-  <summary>iPad (768x1024)</summary>
-  <img alt="iPad" src=".github/iPad.png">
-</details>
+![iPhone 12 Pro Max](.github/iPhone-12-Pro-Max.png)
 
-<details>
-  <summary>Laptop 13" (1280x800)</summary>
-  <img alt="Laptop 13"" src=".github/Laptop-S.png">
-</details>
+- iPad (768x1024):
 
-<details>
-  <summary>iMac Retina 27" (2560x1440)</summary>
-  <img alt="iMac Retina 27"" src=".github/iMac-Retina-27.png">
-</details>
+![iPad](.github/iPad.png)
+
+- Laptop 13" (1280x800):
+
+![Laptop 13"](.github/Laptop-S.png)
+
+- iMac Retina 27" (2560x1440):
+
+![iMac Retina 27"](.github/iMac-Retina-27.png)
 
 ## Submission instructions
 
