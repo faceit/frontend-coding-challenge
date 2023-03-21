@@ -115,7 +115,7 @@ Requirements:
 
 ### 7. Make it responsive
 
-- Examples of the expected layout on different screen sizes are provided:
+- Example screenshots of the expected layout on different screen sizes are provided (expand to see the screenshot):
 
 <details>
   <summary>iPhone 12 Pro Max (428x926)</summary>
