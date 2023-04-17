@@ -53,14 +53,14 @@ This is a minimal Create React App SPA that includes:
 
 - Pressing the `EDIT` button opens a browser prompt with the prompt message `New Tournament Name:`, an input field with the current tournament name as pre-filled value and buttons `Cancel` to cancel and `OK` to confirm.
 - The tournament name must contain only Latin letters, numbers, and spaces, not an empty string or only spaces.
-- When `OK` is selected, the tournament name updates immediately in the UI through an "optimistic update", without any loading indicators, and a fetch call to the fake REST API.
+- When `OK` is selected, the tournament name updates immediately in the UI through an "optimistic update" with rollback, without any loading indicators.
 
 ### 3. Delete a tournament
 
 ![delete-promp](.github/delete-prompt.png)
 
 - Pressing the `DELETE` button opens a browser prompt with the message `Do you really want to delete this tournament?` and the buttons `Cancel` to cancel and `OK` to confirm.
-- When `OK` is selected, the tournament is deleted immediately in the UI using an "optimistic delete", without any loading indicators, and a fetch call to the fake REST API is made.
+- When `OK` is selected, the tournament is deleted immediately in the UI using an "optimistic delete" with rollback, without any loading indicators.
 
 ### 4. Search tournaments
 
