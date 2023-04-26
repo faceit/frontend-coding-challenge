@@ -1,6 +1,6 @@
 # Frontend Coding Challenge v2.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and has addtional libraries included:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and has addtional libraries includes:
 
 - [Redux](https://redux.js.org/)
 - [Redux Thunk](https://github.com/reduxjs/redux-thunk)
@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Head over to the coding challenge [here](./CHALLENGE.md).
 
-## Available Scripts
+## Script that is available
 
 In the project directory, you can run:
 
