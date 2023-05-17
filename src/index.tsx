@@ -1,15 +1,17 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux';
-import GlobalStyle from './GlobalStyle';
-import store from './store';
 import Container from './components/Container';
+import GlobalStyle from './GlobalStyle';
 import H4 from './components/H4';
+import { Provider } from 'react-redux';
+import React from 'react';
+import TournamentPage from './pages/tournaments';
+import { createRoot } from 'react-dom/client';
+import store from './store';
 
 const App = () => {
   return (
     <Container>
       <H4>FACEIT Tournaments</H4>
+      <TournamentPage />
     </Container>
   );
 };

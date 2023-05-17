@@ -1,8 +1,23 @@
-const initialState = {};
+import { Action } from '../actions/tournaments';
+import { Tournaments } from '../types';
+
+const initialState: Tournaments = {
+  status: 'pending',
+  filter: '',
+  tournaments: [],
+};
 
 export default function tournaments(
-  state: unknown = initialState,
-  action: unknown
+  state: Tournaments = initialState,
+  action: Action
 ) {
+  switch (action.type) {
+    case 'tournaments/fetchStarted':
+      return { ...state, status: 'pending' };
+    case 'tournaments/fetchSucceeded':
+      return { ...state, status: 'fulfilled', tournaments: action.payload };
+    case 'tournaments/fetchFailed':
+      return { ...state, status: 'rejected' };
+  }
   return state;
 }
