@@ -18,6 +18,8 @@ export default function tournaments(
       return { ...state, status: 'fulfilled', tournaments: action.payload };
     case 'tournaments/fetchFailed':
       return { ...state, status: 'rejected' };
+    case 'tournaments/changeFilter':
+      return { ...state, filter: action.payload };
   }
   return state;
 }

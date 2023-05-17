@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 
+import { Message } from './Message';
 import { Tournament } from '../../types/tournaments';
 import TournamentItem from './TournamentItem';
 import styled from 'styled-components';
@@ -7,7 +8,6 @@ import theme from '../../theme';
 
 const Container = styled.div`
   display: grid;
-  margin-top: ${theme.spacing(4)};
   gap: ${theme.spacing(4)};
 
   @media (min-width: ${theme.breakpoints.s}) {
@@ -23,10 +23,15 @@ const TournamentList = ({ tournaments }: TournamentListProps) => {
   useEffect(() => {
     console.log(tournaments);
   }, [tournaments]);
+
+  if (tournaments.length === 0) {
+    return <Message>No tournaments found.</Message>;
+  }
+
   return (
     <Container>
       {tournaments.map((tournament) => (
-        <TournamentItem tournament={tournament} />
+        <TournamentItem key={tournament.id} tournament={tournament} />
       ))}
     </Container>
   );

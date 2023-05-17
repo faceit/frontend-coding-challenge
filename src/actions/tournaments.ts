@@ -1,4 +1,4 @@
-import { RootDispatch, RootGetState, RootState } from '../store';
+import { RootGetState, RootState, RootThunkDispatch } from '../store';
 
 import { API_TOURNAMENTS_URL } from '../constants/api';
 import { AnyAction } from 'redux';
@@ -22,17 +22,14 @@ const fetchTournamentsFailed = (error: unknown) => ({
 });
 
 const fetchTournaments =
-  (): Thunk => async (dispatch: RootDispatch, getState: RootGetState) => {
+  (): Thunk => async (dispatch: RootThunkDispatch, getState: RootGetState) => {
     dispatch(fetchTournamentsStarted());
 
-    // The search here may return unexpected tournaments because it searches _all_ fields.
-    // This includes the ISO start date and id fields at the time of writing.
-    // It appears that the backend doesn't support searching specific fields. (filters are exact matches only)
-
     try {
-      const base = API_TOURNAMENTS_URL;
-      const search = getState().tournaments.search;
-      const url = search ? `${base}?q=${search}` : base;
+      const filter = getState().tournaments.filter;
+      const url = filter
+        ? `${API_TOURNAMENTS_URL}?q=${filter}`
+        : API_TOURNAMENTS_URL;
       const response = await fetch(url);
       const tournaments = await response.json();
       dispatch(fetchTournamentsSuccess(tournaments));
@@ -41,11 +38,24 @@ const fetchTournaments =
     }
   };
 
+const changeTournamentsFilter = (filter: string) => ({
+  type: 'tournaments/changeFilter' as const,
+  payload: filter,
+});
+
+const filterTournaments =
+  (filter: string): Thunk =>
+  async (dispatch: RootThunkDispatch) => {
+    dispatch(changeTournamentsFilter(filter));
+    dispatch(fetchTournaments());
+  };
+
 type Action =
   | ReturnType<typeof fetchTournamentsStarted>
   | ReturnType<typeof fetchTournamentsSuccess>
-  | ReturnType<typeof fetchTournamentsFailed>;
+  | ReturnType<typeof fetchTournamentsFailed>
+  | ReturnType<typeof changeTournamentsFilter>;
 
 export type { Action };
 
-export { fetchTournaments };
+export { fetchTournaments, changeTournamentsFilter, filterTournaments };

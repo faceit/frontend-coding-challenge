@@ -3,12 +3,16 @@ import React, {
   ChangeEventHandler,
   MouseEvent,
   MouseEventHandler,
+  useEffect,
+  useState,
 } from 'react';
 
 import Button from '../Button';
 import SearchInput from './SearchInput';
+import { filterTournaments } from '../../actions/tournaments';
 import styled from 'styled-components';
 import theme from '../../theme';
+import { useTournamentDispatch } from '../../selectors/tournaments';
 
 const ToolbarContainer = styled.div`
   display: flex;
@@ -17,7 +21,10 @@ const ToolbarContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-const Toolbar = ({ filter, setFilter }: ToolbarProps) => {
+const Toolbar = () => {
+  const [filter, setFilter] = useState('');
+  const dispatch = useTournamentDispatch();
+
   const onFilterChange: ChangeEventHandler = (
     e: ChangeEvent<HTMLInputElement>
   ) => {
@@ -28,6 +35,10 @@ const Toolbar = ({ filter, setFilter }: ToolbarProps) => {
     e: MouseEvent<HTMLInputElement>
   ) => {};
 
+  useEffect(() => {
+    dispatch(filterTournaments(filter));
+  }, [dispatch, filter]);
+
   return (
     <ToolbarContainer>
       <SearchInput value={filter} onChange={onFilterChange} />
@@ -35,10 +46,5 @@ const Toolbar = ({ filter, setFilter }: ToolbarProps) => {
     </ToolbarContainer>
   );
 };
-
-interface ToolbarProps {
-  filter: string;
-  setFilter: Function;
-}
 
 export default Toolbar;

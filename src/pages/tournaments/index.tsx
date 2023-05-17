@@ -1,20 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import {
   useTournamentDispatch,
   useTournamentSelector,
 } from '../../selectors/tournaments';
 
-import { AnyAction } from 'redux';
 import Error from '../../components/tournament/Error';
 import Loading from '../../components/tournament/Loading';
-import { ThunkDispatch } from 'redux-thunk';
 import Toolbar from '../../components/tournament/Toolbar';
 import TournamentList from '../../components/tournament/TournamentList';
 import { fetchTournaments } from '../../actions/tournaments';
+import styled from 'styled-components';
+import theme from '../../theme';
+
+const TournamentWrapper = styled.div`
+  margin-top: ${theme.spacing(4)};
+`;
 
 const Page = () => {
-  const [filter, setFilter] = useState('');
-  const dispatch: ThunkDispatch<{}, {}, AnyAction> = useTournamentDispatch();
+  const dispatch = useTournamentDispatch();
   const { tournaments, status } = useTournamentSelector();
 
   useEffect(() => {
@@ -23,14 +26,16 @@ const Page = () => {
 
   return (
     <>
-      <Toolbar filter={filter} setFilter={setFilter} />
-      {status === 'pending' ? (
-        <Loading />
-      ) : status === 'rejected' ? (
-        <Error />
-      ) : (
-        <TournamentList tournaments={tournaments} />
-      )}
+      <Toolbar />
+      <TournamentWrapper>
+        {status === 'pending' ? (
+          <Loading />
+        ) : status === 'rejected' ? (
+          <Error />
+        ) : (
+          <TournamentList tournaments={tournaments} />
+        )}
+      </TournamentWrapper>
     </>
   );
 };
