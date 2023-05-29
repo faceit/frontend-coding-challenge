@@ -1,0 +1,66 @@
+import React, { FC, useEffect, useState } from 'react';
+import {
+  ERROR_ANIM_TIME,
+  TournamentActions,
+  TournamentDetails,
+} from './styles';
+import H6 from '../H6';
+import Button from '../Button';
+import { useDispatch } from 'react-redux';
+import { deleteTournament } from '../../actions/tournaments';
+import { Tournament, TournamentConfig } from './types';
+import FormattedMessage from '../FormattedMessage';
+
+const TournamentView: FC<TournamentConfig> = ({ tournament }) => {
+  const dispatch = useDispatch();
+  const [shake, setShake] = useState<boolean>(false);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setShake(false);
+    }, ERROR_ANIM_TIME);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [shake]);
+
+  const delTournament = (tournament: Tournament) => {
+    const confirmed = window.confirm('Sure?');
+
+    if (confirmed) {
+      dispatch(deleteTournament(tournament));
+    }
+  };
+
+  return (
+    <TournamentDetails doShake={shake} key={tournament.id}>
+      <H6>{tournament.name}</H6>
+      <div>
+        <FormattedMessage id="app.organizer" />: {tournament.organizer}
+      </div>
+      <div>
+        <FormattedMessage id="app.game" />: {tournament.game}
+      </div>
+      <div>
+        <FormattedMessage id="app.participants" />
+        {': '}
+        {tournament.participants.current} /{tournament.participants.max}
+      </div>
+      <div>
+        <FormattedMessage id="app.start" />: {tournament.startDate}
+      </div>
+      <TournamentActions>
+        <Button
+          onClick={() => {
+            delTournament(tournament);
+          }}
+        >
+          <FormattedMessage id="app.delete" />
+        </Button>
+      </TournamentActions>
+    </TournamentDetails>
+  );
+};
+
+export default TournamentView;
