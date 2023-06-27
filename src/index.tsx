@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -30,9 +30,11 @@ if (!container) {
 
 const root = createRoot(container);
 root.render(
-  <Provider store={store}>
-    <GlobalStyle />
-    <App />
-    <RouterProvider router={router} />
-  </Provider>
+  <StrictMode>
+    <Provider store={store}>
+      <GlobalStyle />
+      <App />
+      <RouterProvider router={router} />
+    </Provider>
+  </StrictMode>
 );

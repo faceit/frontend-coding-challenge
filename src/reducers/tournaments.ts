@@ -9,18 +9,6 @@ const initialState: TournamentsState = {
   guerry: '',
 };
 
-const deleteTournamentHandler = (
-  state: TournamentsState,
-  { payload: deletedTournament }: ActionWithPayload<Tournament>
-): TournamentsState => {
-  return {
-    ...state,
-    data: state.data.filter(
-      (tournament) => tournament.id !== deletedTournament.id
-    ),
-  };
-};
-
 const createTournamentHandler = (
   state: TournamentsState,
   { payload: newTournament }: ActionWithPayload<Tournament>
@@ -36,7 +24,6 @@ const handlers: {
     (state: TournamentsState, action: ActionWithPayload<any>): TournamentsState;
   };
 } = {
-  [ActionType.DELETE_TOURNAMENT]: deleteTournamentHandler,
   [ActionType.CREATE_TOURNAMENT]: createTournamentHandler,
 };
 

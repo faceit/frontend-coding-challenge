@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import axios, { AxiosResponse } from 'axios';
@@ -15,20 +15,29 @@ import FormattedMessage from '../../components/FormattedMessage';
 import { API_TOURNAMENTS_URL } from '../../constants/api';
 
 function openCreateTournamentNameDialog(): string {
-  const name = prompt('Enter the name:') ?? '';
+  const name = prompt('Enter the name:') ?? 'Default';
 
   if (isValidName(name)) return name;
-  return '';
+  throw new Error('Name could not be empty');
 }
 
-const TournamentsList: FC = () => {
+const Tournaments: FC = () => {
   const dispatch = useDispatch();
   const tournamentsList: Tournament[] = useSelector(getTournaments);
 
+  useEffect(() => {
+    if (tournamentsList.length === 0) {
+      axios
+        .post<any, AxiosResponse<Tournament>>(API_TOURNAMENTS_URL, {
+          name: 'test',
+        })
+        .then(({ data }) => dispatch(createTournament(data)));
+    }
+  }, [tournamentsList]);
+
   const createTournamentHandler = () => {
     const name = openCreateTournamentNameDialog();
-
-    if (name && name !== '') {
+    if (name) {
       axios
         .post<any, AxiosResponse<Tournament>>(API_TOURNAMENTS_URL, { name })
         .then(({ data }) => dispatch(createTournament(data)));
@@ -49,4 +58,4 @@ const TournamentsList: FC = () => {
   );
 };
 
-export default TournamentsList;
+export default Tournaments;

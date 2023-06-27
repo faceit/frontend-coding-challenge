@@ -37,18 +37,21 @@ const TournamentView: FC<TournamentConfig> = ({ tournament }) => {
     <TournamentDetails doShake={shake} key={tournament.id}>
       <H6>{tournament.name}</H6>
       <div>
-        <FormattedMessage id="app.organizer" />: {tournament.organizer}
+        <FormattedMessage id="app.organizer" />
+        Organizer: {tournament.organizer}
       </div>
       <div>
-        <FormattedMessage id="app.game" />: {tournament.game}
+        <FormattedMessage id="app.game" />
+        game: {tournament.game}
       </div>
       <div>
         <FormattedMessage id="app.participants" />
-        {': '}
+        {'Participants: '}
         {tournament.participants.current} /{tournament.participants.max}
       </div>
       <div>
-        <FormattedMessage id="app.start" />: {tournament.startDate}
+        <FormattedMessage id="app.start" />
+        Start: {tournament.startDate}
       </div>
       <TournamentActions>
         <Button
@@ -57,6 +60,7 @@ const TournamentView: FC<TournamentConfig> = ({ tournament }) => {
           }}
         >
           <FormattedMessage id="app.delete" />
+          Delete
         </Button>
       </TournamentActions>
     </TournamentDetails>
