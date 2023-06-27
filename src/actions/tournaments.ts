@@ -17,16 +17,3 @@ export function createTournament(
     payload: tournament,
   };
 }
-
-export interface DeleteTournamentAction {
-  type: ActionType.DELETE_TOURNAMENT;
-  payload: Tournament;
-}
-export function deleteTournament(
-  tournament: Tournament
-): DeleteTournamentAction {
-  return {
-    type: ActionType.DELETE_TOURNAMENT,
-    payload: tournament,
-  };
-}

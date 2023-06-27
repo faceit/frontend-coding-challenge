@@ -6,13 +6,10 @@ import {
 } from './styles';
 import H6 from '../H6';
 import Button from '../Button';
-import { useDispatch } from 'react-redux';
-import { deleteTournament } from '../../actions/tournaments';
 import { Tournament, TournamentConfig } from './types';
 import FormattedMessage from '../FormattedMessage';
 
 const TournamentView: FC<TournamentConfig> = ({ tournament }) => {
-  const dispatch = useDispatch();
   const [shake, setShake] = useState<boolean>(false);
 
   useEffect(() => {
@@ -29,7 +26,7 @@ const TournamentView: FC<TournamentConfig> = ({ tournament }) => {
     const confirmed = window.confirm('Sure?');
 
     if (confirmed) {
-      dispatch(deleteTournament(tournament));
+      // TODO: Implement logic here
     }
   };
 
